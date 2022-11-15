@@ -1,0 +1,30 @@
+.search-bar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    grid-column: 2 / -1;
+    grid-row: 1 / 1;
+    border-radius: 10px;
+  
+    input{
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        height: 100%;
+        color: white;
+        &:active{
+            border-bottom: 1px solid white;
+        }
+    }
+    img{
+        margin-right: 20px;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    
+
+}

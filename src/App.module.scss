@@ -1,0 +1,23 @@
+html{
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: #10141E;
+  padding: 32px;
+
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 96px auto;
+  grid-template-rows:100px auto;
+  gap: 32px;
+}
