@@ -1,13 +1,6 @@
-import React from "react";
 import classes from "./Card.module.scss";
-
-type Props = {
-  title: string;
-  rating: string;
-  year: number;
-  category: string;
-  thumbnail: any;
-};
+import { Props } from "./types";
+import Bookmark from '../../../static/icon-bookmark-empty.svg'
 
 export default function Card({
   title,
@@ -17,17 +10,20 @@ export default function Card({
   rating,
 }: Props) {
   return (
-    <div>
-      <div className={classes.bookmark}></div>
-      <div>
-        <img src={thumbnail} alt="MoviePicture" />
-        <div className={classes.movieInfo}>
-          <p>{year}</p>
-          <p>{category}</p>
-          <p>{rating}</p>
-        </div>
-        <h3>{title}</h3>
+    <div
+      style={{ backgroundImage: `url(${thumbnail})` }}
+      className={classes.container}
+    >
+      <div className={classes.bookmark}>
+        <img src={Bookmark} alt="Bookmark" />
       </div>
+
+      <div className={classes.movieInfo}>
+        <p>{`${year} |`}</p>
+        <p>{`${category} |`}</p>
+        <p>{rating}</p>
+      </div>
+      <h3>{title}</h3>
     </div>
   );
 }

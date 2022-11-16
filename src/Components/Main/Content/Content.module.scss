@@ -1,0 +1,14 @@
+.main {
+    color: white;
+    h1 {
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      align-items: center;
+    }
+  }
+  
