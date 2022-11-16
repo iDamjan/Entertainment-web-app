@@ -2,14 +2,34 @@ import Card from "../Card/Card";
 import classes from "./Content.module.scss";
 // import { PropsType } from "./types";
 
-export default function Content({data}:any) {
+type Props = {
+  data: any;
+  searchInput: string;
+};
+
+export default function Content({ data, searchInput }: Props) {
+
+  const filteredData = data.filter((x: any) =>
+    x.title.toLowerCase().includes(searchInput.toLowerCase())
+  );
+
+
   return (
     <div className={classes.main}>
-      <h1>{data[0].category}</h1>
+      {searchInput === "" ? (
+        <h1>{data[0].category}</h1>
+      ) : (
+        <h1>
+          Found {filteredData.length} {data[0].category} for{" "}
+          {`"${searchInput}"`}
+        </h1>
+      )}
+
       <div className={classes.container}>
-        {data.map((x:any) => {
+        {filteredData.map((x: any) => {
           return (
             <Card
+              key={x.title}
               title={x.title}
               thumbnail={x.thumbnail.regular?.medium}
               year={x.year}
