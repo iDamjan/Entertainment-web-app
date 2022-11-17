@@ -5,11 +5,39 @@
   background-size: cover;
   padding: 32px;
   border-radius: 20px;
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.movieInfo{
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    width: 150px;
+.movieDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
+}
+
+.bookmark {
+  align-self: flex-end;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: rgba(29, 29, 29, 0.555);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  
+  &:hover{
+    cursor: pointer;
+  }
+  svg {
+    fill: none;
+    stroke: white;
+    stroke-width: 2.5px;
+    stroke-linejoin: round;
+    
+    &:hover {
+      fill: white;
+    }
+  }
 }
