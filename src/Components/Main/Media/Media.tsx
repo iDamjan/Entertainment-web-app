@@ -8,6 +8,7 @@ type Props = {
 };
 
 export default function Content({ data, searchInput }: Props) {
+  
   const filteredData = data.filter((x) =>
     x.title.toLowerCase().includes(searchInput.toLowerCase())
   );

@@ -13,6 +13,9 @@ export default function SearchBar({ searchInput, setSearchInput }: Props) {
       placeholder = "Search for movies...";
     } else if (location.pathname === "/tvSeries") {
       placeholder = "Search for TV Series...";
+      
+    } else if (location.pathname === "/bookmarks"){
+      placeholder = "Search for Bookmarked shows...";
     } else return placeholder;
   };
   placeholderRule();

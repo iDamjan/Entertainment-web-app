@@ -23,7 +23,9 @@ export default function Navbar() {
         <Link to="/tvSeries">
           <img src={TvSeries} alt="TvSeries" />
         </Link>
-        <img src={Bookmarks} alt="" />
+        <Link to="/bookmarks">
+          <img src={Bookmarks} alt="Bookmarks" />
+        </Link>
       </div>
       <div className={classes.avatar}>
         <img src={Avatar} alt="avatar" />
