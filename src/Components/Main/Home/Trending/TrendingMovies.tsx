@@ -1,13 +1,14 @@
-import data from "../../../../Data/data.json";
+import { getData } from "../../../../api"
 import Card from "../../Card/Card";
 import classes from "./TrendingMovies.module.scss";
-
 export default function TrendingMovies() {
+
+  const data = getData()
   const trending = data.filter((data) => data.isTrending === true);
 
   return (
     <div className={classes.container}>
-      {trending.map((trend) => {
+      {trending.map((trend :any) => {
         return (
           <Card
             key={trend.title}
@@ -16,6 +17,8 @@ export default function TrendingMovies() {
             year={trend.year}
             category={trend.category}
             rating={trend.rating}
+            isTrending = {trend.isTrending}
+            isBookmarked = {trend.isBookmarked}
           />
         );
       })}

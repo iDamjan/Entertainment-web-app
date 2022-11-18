@@ -1,5 +1,7 @@
 .container {
-  width: 280px;
+  width: 100%;
+  max-width: 20%;
+  min-width: 150px;
   height: 230px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -8,6 +10,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  // flex-shrink: 1;
+  flex-basis: 1;
 }
 .movieDetails {
   display: flex;
@@ -41,3 +45,30 @@
     }
   }
 }
+
+.bookmarkActive {
+  align-self: flex-end;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: rgba(29, 29, 29, 0.555);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  
+  &:hover{
+    cursor: pointer;
+  }
+  svg {
+    fill: white;
+    stroke: white;
+    stroke-width: 2.5px;
+    stroke-linejoin: round;
+    
+    &:hover {
+      fill: white;
+    }
+  }
+}
+

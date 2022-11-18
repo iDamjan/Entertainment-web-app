@@ -24,35 +24,40 @@ export default function Bookmarks({ searchInput }: { searchInput: string }) {
   const filteredTvSeries = bookmarkedTvSeries.filter((x) =>
     x.title.toLowerCase().includes(searchInput.toLowerCase())
   );
+  
 
   return (
     <div className={classes.main}>
       <h1>Bookmarked Movies</h1>
       <div className={classes.container}>
-        {filteredMovies.map((trend: any) => {
+        {filteredMovies.map((movie: any) => {
           return (
             <Card
-              key={trend.title}
-              title={trend.title}
-              thumbnail={trend.thumbnail}
-              year={trend.year}
-              category={trend.category}
-              rating={trend.rating}
+              key={movie.title}
+              title={movie.title}
+              thumbnail={movie.thumbnail}
+              year={movie.year}
+              category={movie.category}
+              rating={movie.rating}
+              isBookmarked ={movie.isBookmarked}
+              isTrending = {movie.isTrending}
             />
           );
         })}
       </div>
       <h1>Bookmarked TV Series</h1>
       <div className={classes.container}>
-        {filteredTvSeries.map((trend: any) => {
+        {filteredTvSeries.map((tvSerie: any) => {
           return (
             <Card
-              key={trend.title}
-              title={trend.title}
-              thumbnail={trend.thumbnail}
-              year={trend.year}
-              category={trend.category}
-              rating={trend.rating}
+              key={tvSerie.title}
+              title={tvSerie.title}
+              thumbnail={tvSerie.thumbnail}
+              year={tvSerie.year}
+              category={tvSerie.category}
+              rating={tvSerie.rating}
+              isBookmarked ={tvSerie.isBookmarked}
+              isTrending= {tvSerie.isTrending}
             />
           );
         })}

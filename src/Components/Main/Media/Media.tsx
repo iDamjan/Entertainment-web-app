@@ -34,6 +34,8 @@ export default function Content({ data, searchInput }: Props) {
               year={x.year}
               category={x.category}
               rating={x.rating}
+              isBookmarked = {x.isBookmarked}
+              isTrending = {x.isTrending}
             />
           );
         })}

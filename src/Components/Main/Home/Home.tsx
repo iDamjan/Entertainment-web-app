@@ -4,11 +4,8 @@ import Recommended from "./RecommendedMovies/Recommended";
 import data from "../../../Data/data.json";
 import Card from "../Card/Card";
 
-type Props = {
-  searchInput: string;
-};
 
-export default function Home({ searchInput }: Props) {
+export default function Home({ searchInput }: {searchInput:string}) {
   const filteredData = data.filter((x) =>
     x.title.toLowerCase().includes(searchInput.toLowerCase())
   );
@@ -38,6 +35,8 @@ export default function Home({ searchInput }: Props) {
                   year={x.year}
                   category={x.category}
                   rating={x.rating}
+                  isBookmarked ={x.isBookmarked}
+                  isTrending = {x.isTrending}
                 />
               );
             })}

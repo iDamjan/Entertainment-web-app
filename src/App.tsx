@@ -16,6 +16,7 @@ const getMedia = (data: Media[], type: string): Media[] =>
   data.filter((x) => x.category === type);
 
 function App() {
+  
   const data = getData();
   const [searchInput, setSearchInput] = useState("");
 

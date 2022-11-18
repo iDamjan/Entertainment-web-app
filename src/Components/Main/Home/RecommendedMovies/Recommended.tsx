@@ -1,14 +1,16 @@
-import React from "react";
-import data from "../../../../Data/data.json";
+
+import { getData } from "../../../../api"
 import Card from "../../Card/Card";
 import classes from "./Recommended.module.scss";
 
 export default function Recommended() {
+
+  const data = getData();
   const recommendedContent = data.filter((x) => x.isTrending === false);
 
   return (
     <div className={classes.container}>
-      {recommendedContent.map((trend) => {
+      {recommendedContent.map((trend:any) => {
         return (
           <Card
             key={trend.title}
@@ -17,6 +19,8 @@ export default function Recommended() {
             year={trend.year}
             category={trend.category}
             rating={trend.rating}
+            isBookmarked = {trend.isBookmarked}
+            isTrending = {trend.isTrending}
           />
         );
       })}

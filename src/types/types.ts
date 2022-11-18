@@ -1,20 +1,26 @@
-type Thumbnail = {
-    trending: {
-        small:string,
-        large:string
-    },
-    regular: {
-        small:string,
-        medium:string,
-        large:string,
-    }
+interface Trending  {
+    small:string,
+    large:string
+}
+
+interface Regular  {
+    small:string,
+    medium:string,
+    large:string
+}
+
+interface Thumbnail {
+    trending: Trending,
+    regular: Regular
 }
 
 
-export type Media = {
+export interface Media {
     title:string,
     rating:string,
     year:number,
     category:string,
+    isBookmarked:boolean,
+    isTrending:boolean,
     thumbnail: Thumbnail | string;
 }
