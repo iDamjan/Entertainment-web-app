@@ -9,12 +9,14 @@
 }
 .search-main {
   color: white;
+  
   h1 {
     font-weight: 500;
     margin-bottom: 16px;
   }
   .container-main {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 32px;
     align-items: center;

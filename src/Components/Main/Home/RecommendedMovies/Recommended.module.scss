@@ -7,3 +7,8 @@
     // flex-shrink: 1;
     
 }
+@media(max-width: 40em){
+    .container{
+        justify-content: center;
+    }
+}

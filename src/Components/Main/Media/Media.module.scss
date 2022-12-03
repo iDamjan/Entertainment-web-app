@@ -9,7 +9,12 @@
       flex-wrap: wrap;
       gap: 32px;
       align-items: center;
-      justify-content: center;
+      
     }
   }
   
+  @media(max-width: 40em){
+    .container{
+        justify-content: center;
+    }
+}

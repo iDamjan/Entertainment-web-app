@@ -51,7 +51,10 @@
       flex-direction: row;
       margin-bottom: 0;
       width: 100%;
-      max-width: 120px;
+      max-width: 100px;
+      img{
+        width: 15px;
+      }
     }
     .avatar{
       img{
