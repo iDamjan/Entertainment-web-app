@@ -11,12 +11,10 @@ import ContextProvider from "./context/context-api";
 import Bookmarks from "./Components/Main/bookmarks/Bookmarks";
 import { MediaType } from "./enums/enums";
 
-
 const getMedia = (data: Media[], type: string): Media[] =>
   data.filter((x) => x.category === type);
 
 function App() {
-  
   const data = getData();
   const [searchInput, setSearchInput] = useState("");
 
@@ -46,7 +44,10 @@ function App() {
               />
             }
           />
-          <Route path= "/bookmarks" element= {<Bookmarks searchInput={searchInput} /> } />
+          <Route
+            path="/bookmarks"
+            element={<Bookmarks searchInput={searchInput} />}
+          />
         </Routes>
       </div>
     </ContextProvider>

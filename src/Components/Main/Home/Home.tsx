@@ -1,11 +1,12 @@
 import classes from "./Home.module.scss";
 import TrendingMovies from "./Trending/TrendingMovies";
 import Recommended from "./RecommendedMovies/Recommended";
-import data from "../../../Data/data.json";
+import { getData } from "../../../api"
 import Card from "../Card/Card";
 
 
 export default function Home({ searchInput }: {searchInput:string}) {
+  const data = getData()
   const filteredData = data.filter((x) =>
     x.title.toLowerCase().includes(searchInput.toLowerCase())
   );

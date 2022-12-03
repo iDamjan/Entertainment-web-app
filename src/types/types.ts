@@ -21,6 +21,6 @@ export interface Media {
     year:number,
     category:string,
     isBookmarked:boolean,
-    isTrending:boolean,
+    isTrending?:boolean,
     thumbnail: Thumbnail | string;
 }

@@ -37,3 +37,29 @@
     border-radius: 50%;
   }
 }
+
+
+@media (max-width:40em) {
+  .navbar{
+    grid-row:1/1;
+    grid-column: 1/-1;
+    width: 100%;
+    height: 40px;
+    flex-direction: row;
+    
+    .categories{
+      flex-direction: row;
+      margin-bottom: 0;
+      width: 100%;
+      max-width: 120px;
+    }
+    .avatar{
+      img{
+        margin-right: 20px;
+      }
+    }
+    .logo{
+      margin-left: 20px;
+    }
+  }
+}

@@ -42,3 +42,11 @@
     display: none;
   }
 }
+
+
+@media (max-width:40em){
+  .search-bar{
+    grid-row:2 ;
+    grid-column:1 / -1;
+  }
+}

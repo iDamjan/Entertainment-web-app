@@ -12,7 +12,7 @@ export default function Card({
   isBookmarked
 }: Media) {
 
-  const { bookmarkedMedia, setBookmarkedMedia }: any = useContext(ContextApi);
+  const { bookmarkedMedia, setBookmarkedMedia }:any = useContext(ContextApi);
 
   const bookmarkHandler = () => {
     setBookmarkedMedia([
@@ -28,7 +28,6 @@ export default function Card({
     ]);
   };
 
-  console.log(isBookmarked)
 
   return (
     <div
